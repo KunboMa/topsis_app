@@ -37,6 +37,8 @@ def calculate_topsis(df, selected_columns, direction_list):
 
     result = pd.DataFrame({
         "FCIL_CDE": df["FCIL_CDE"].values,
+        "经度": df["经度"].values,
+        "纬度": df["纬度"].values,
         "TOPSIS得分": CR
     }).sort_values(by="TOPSIS得分", ascending=False).reset_index(drop=True)
 
